@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Brandon's Bodega
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TODO: IMAGE
 
-## Available Scripts
+Welcome to **Brandon's Bodega**, we may not have everything you want, but we do carry the things Brandon needs in his day-to-day life.
 
-In the project directory, you can run:
+Brandon's Bodega has recently decided to create an internal website for managing the restock of the staple items the store carries. You've been hired to help push the site over the finish line!
 
-### `npm start`
+## Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For this project, you’ll be building out a React application that displays a
+list of current inventory, among other features. Try your best to find the right
+places to insert code into the established code base.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Part of what this code challenge is testing is your ability to follow given
+instructions. While you will definitely have a significant amount of freedom in
+how you implement the features, be sure to carefully read the directions for
+setting up the application.
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Run `npm install` in your terminal.
+2. Run `npm run server`. This will run your backend on port `8001`.
+3. In a new terminal, run `npm start`.
 
-### `npm run build`
+Make sure to open [http://localhost:8001/inventory](http://localhost:8001/inventory) in
+the browser to verify that your backend is working before you proceed!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The base URL for your backend is: `http://localhost:8001`
+## Core Deliverables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As a user, I should be able to:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- See all the details of the inventory items rendered in `CurrentInventoryList`.
+- Add an inventory item from the current list to the reorder list by clicking on it. The selected inventory item should render in the `ReorderInventoryList` component. The inventory item can be added only **once**. The item **does not** disappear from the `CurrentInventoryList`.
+- Remove an inventory item from the reorder list by clicking on it. The inventory item disappears from the `ReorderInventoryList` component.
+- Remove an inventory item forever by clicking the delete button at the bottom of the `InventoryItemCard`. This should delete the inventory item both from the backend and from everywhere on the frontend.
 
-### `npm run eject`
+### Endpoints for Core Deliverables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### GET /inventory
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example Response:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```json
+[
+  {
+    "id": 1,
+    "image": "./images/doritos.jpeg",
+    "name": "Doritos",
+    "price": 4.99
+  },
+  {
+    "id": 2,
+    "image": "./images/ben-jerry.png",
+    "name": "Ben & Jerry's",
+    "price": 7.99
+  },
+  {
+    "id": 3,
+    "image": "./images/milk.png",
+    "name": "Milk",
+    "price": 3.99
+  }
+]
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### DELETE /inventory/:id
 
-## Learn More
+Example Response:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{}
+```

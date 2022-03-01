@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
     return(
         <header>
-            <h1>Brandon's Bodega</h1>
+            <img src="./images/bodega-logo.png"/>
         </header>
     );
 }
