@@ -1,6 +1,6 @@
 # Brandon's Bodega
 
-TODO: IMAGE
+![Bodega](./finished-project.png)
 
 Welcome to **Brandon's Bodega**, we may not have everything you want, but we do carry the things Brandon needs in his day-to-day life.
 
