@@ -60,8 +60,9 @@ header img {
 }
 
 #current-inventory .card {
-    height:auto;
-    display:flex;   
+    display:flex;
+    flex-direction: column;
+    width:15rem;
 }
 
 #reorder-container .card {
@@ -75,4 +76,14 @@ header img {
 .card img {
     width:6em;
     height:6em;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    background-color: #F15946;
+    color: white;
+    font-family: 'Ultra', serif;
+    font-size: 1rem;
 }

@@ -5,7 +5,7 @@ function InventoryItemCard({item, onCardClicked, onDelete}) {
         <div className="card" onClick={() => onCardClicked(item)}>
             <img src={item.image}></img>
             <h3>{item.name}</h3>
-            <h4>{item.price}</h4>
+            <h4>${item.price}</h4>
             <button onClick={() => onDelete(item)}>Delete</button>
         </div>
     );
