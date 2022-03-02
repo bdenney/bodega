@@ -2,7 +2,7 @@
 
 ![Bodega](./finished-project.png)
 
-Welcome to **Brandon's Bodega**, we may not have everything you want, but we do carry the things Brandon needs in his day-to-day life.
+Welcome to **Brandon's Bodega**! We may not have everything you want, but we do carry the things Brandon needs in his day-to-day life.
 
 Brandon's Bodega has recently decided to create an internal website for managing the restock of the staple items the store carries. You've been hired to help push the site over the finish line!
 
